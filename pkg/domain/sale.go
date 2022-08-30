@@ -1,6 +1,8 @@
 package domain
 
-import "time"
+import (
+	"time"
+)
 
 type Sale struct {
 	SaleId     int64     `json:"sale-id"`
@@ -44,4 +46,11 @@ type SaleSvc interface {
 	Get(saleNo string) (*Sale, error)
 	List() ([]*Sale, error)
 	Create(s *Sale) error
+}
+
+type SaleDB interface {
+	Get(id int64) (*Sale, error)
+	List(category string) ([]*Sale, error)
+	Create(p *Sale) error
+	Delete(id int64) error
 }
