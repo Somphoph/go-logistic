@@ -3,30 +3,30 @@ package domain
 import "time"
 
 type Purchase struct {
-	PurchaseId   int64     `json:"purchase-id"`
-	PurchaseNo   string    `json:"purchase-no"`
-	PurchaseDate time.Time `json:"purchase-date"`
-	VendorId     int64     `json:"vendor-id"`
-	ProductId    int64     `json:"product-id"`
+	PurchaseId   int64     `json:"purchaseId"`
+	PurchaseNo   string    `json:"purchaseNo"`
+	PurchaseDate time.Time `json:"purchaseDate"`
+	VendorId     int64     `json:"vendorId"`
+	ProductId    int64     `json:"productId"`
 	Qty          int       `json:"qty"`
 	Cost         float32   `json:"cost"`
-	ReqDate      time.Time `json:"req-date"`
+	ReqDate      time.Time `json:"reqDate"`
 }
 
 type Receive struct {
-	ReceiveId    int64     `json:"receive-id"`
-	ReceiveDocNo string    `json:"receive-doc-no"`
-	ReceiveDate  time.Time `json:"receive-date"`
-	ProductId    int64     `json:"product-id"`
+	ReceiveId    int64     `json:"receiveId"`
+	ReceiveDocNo string    `json:"receiveDocNo"`
+	ReceiveDate  time.Time `json:"receiveDate"`
+	ProductId    int64     `json:"productId"`
 	Qty          int       `json:"qty"`
 	Cost         float32   `json:"cost"`
-	PurchaseId   int64     `json:"purchase-id"`
+	PurchaseId   int64     `json:"purchaseId"`
 }
 
 type Vendor struct {
-	VendorId       int64  `json:"vendor-id"`
-	VendorName     string `json:"vendor-name"`
-	VendorFullName string `json:"vendor-full-name"`
+	VendorId       int64  `json:"vendorId"`
+	VendorName     string `json:"vendorName"`
+	VendorFullName string `json:"vendorFullName"`
 	Addr           string `json:"addr"`
-	Addr1          string `json:"addr-1"`
+	Addr1          string `json:"addr1"`
 }

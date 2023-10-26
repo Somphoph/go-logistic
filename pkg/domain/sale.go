@@ -5,39 +5,39 @@ import (
 )
 
 type Sale struct {
-	SaleId     int64     `json:"sale-id"`
-	SaleNo     string    `json:"sale-no"`
-	SaleDate   time.Time `json:"sale-date"`
-	CustomerId int64     `json:"customer-id"`
-	ProductId  int64     `json:"product-id"`
+	SaleId     int64     `json:"saleId"`
+	SaleNo     string    `json:"saleNo"`
+	SaleDate   time.Time `json:"saleDate"`
+	CustomerId int64     `json:"customerId"`
+	ProductId  int64     `json:"productId"`
 	Qty        int       `json:"qty"`
 	Price      float32   `json:"price"`
-	ReqDate    time.Time `json:"req-date"`
+	ReqDate    time.Time `json:"reqDate"`
 }
 type Invoice struct {
-	InvId      int64     `json:"inv-id"`
-	InvNo      string    `json:"inv-no"`
-	InvDate    time.Time `json:"inv-date"`
-	CustomerId string    `json:"customer-id"`
-	ProductId  string    `json:"product-id"`
+	InvId      int64     `json:"invId"`
+	InvNo      string    `json:"invNo"`
+	InvDate    time.Time `json:"invDate"`
+	CustomerId string    `json:"customerId"`
+	ProductId  string    `json:"productId"`
 	Qty        int       `json:"qty"`
 	Price      float32   `json:"price"`
-	ReceiveId  int64     `json:"receive-id"`
-	SaleId     int64     `json:"sale-id"`
+	ReceiveId  int64     `json:"receiveId"`
+	SaleId     int64     `json:"saleId"`
 }
 
 type Customer struct {
-	CustomerId  int64  `json:"customer-id"`
-	CusName     string `json:"cus-name"`
-	CusFullName string `json:"cus-full-name"`
+	CustomerId  int64  `json:"customerId"`
+	CusName     string `json:"cusName"`
+	CusFullName string `json:"cusFullName"`
 	Addr        string `json:"addr"`
-	Addr1       string `json:"addr-1"`
+	Addr1       string `json:"addr1"`
 }
 
 type Product struct {
-	ProductId       int64   `json:"product-id"`
-	ProductName     string  `json:"product-name"`
-	ProductFullName string  `json:"product-full-name"`
+	ProductId       int64   `json:"productId"`
+	ProductName     string  `json:"productName"`
+	ProductFullName string  `json:"productFullName"`
 	Cost            float32 `json:"cost"`
 	Price           float32 `json:"price"`
 }
